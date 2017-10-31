@@ -39,14 +39,6 @@ for($page = 1; $page <3; $page++)
 {
     
  $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
- $cHeadres = array(
-      'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'Accept-Language: en-US,en;q=0.5',
-      'Connection: Keep-Alive',
-      'Pragma: no-cache',
-      'Cache-Control: no-cache'
-     );
- 
  $maincode = dlPage($link); 
 $ntn = $maincode->find("//*[@id='lblSRNTN']",0)->plaintext;
  echo  "This is NTN number => $ntn \n";
