@@ -6,9 +6,11 @@ require 'scraperwiki/simple_html_dom.php';
 
 for($page = 0; $page < 32; $page+=16)
 {
-$link = 'https://alumni.iba.edu.pk/alumni/findclassmate/a/'.$page;
-$dom = new simple_html_dom();
-echo $dom->load($link);
+$html = 'https://alumni.iba.edu.pk/alumni/findclassmate/a/'.$page;
+//
+// // Find something on the page using css selectors
+ $dom = new simple_html_dom();
+echo $dom->load($html);
 // print_r($dom->find("table.list"));
       
       
