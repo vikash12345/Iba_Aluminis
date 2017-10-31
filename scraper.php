@@ -11,19 +11,8 @@ $html = 'https://alumni.iba.edu.pk/alumni/findclassmate/a/'.$page;
 // // Find something on the page using css selectors
  $dom = new simple_html_dom();
  $dom->load($html);
-foreach($dom->find("/html/body/div/div[2]/div[1]/div/div[2]/div[2]")as $element)
-{
- if($element)
- {
-  $name = $element->find("div[1]/div[2]/strong/text()",0)->plaintext;
-  echo  $name;
- }
-}
-      
-      
-  
- // $maincode = dlPage($link); 
-  //echo $maincode;
+$name = $dom->find("/html/body/div/div[2]/div[1]/div/div[2]/div[2]/div[1]/div[2]/strong",0)->plaintext;
+ echo $name;
 }
 //
 // // Read in a page
