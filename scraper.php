@@ -39,7 +39,8 @@ $cHeadres = array(
 for($page = 0; $page < 32; $page+=16)
 {
   $link = 'https://alumni.iba.edu.pk/alumni/findclassmate/a/'.$page;
-  echo $link;
+  $maincode = dlPage($link); 
+  echo $maincode;
 }
 
 
