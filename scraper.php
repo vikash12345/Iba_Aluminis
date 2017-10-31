@@ -11,8 +11,13 @@ $html = 'https://alumni.iba.edu.pk/alumni/findclassmate/a/'.$page;
 // // Find something on the page using css selectors
  $dom = new simple_html_dom();
  $dom->load($html);
-print_r($dom->find("div.search-profile-box"));
-
+foreach($dom->find("/html/body/div/div[2]/div[1]/div/div[2]/div[2]")as $element)
+{
+ if($element)
+ {
+  echo $element; 
+ }
+}
       
       
   
