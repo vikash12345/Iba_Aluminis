@@ -15,7 +15,8 @@ foreach($dom->find("/html/body/div/div[2]/div[1]/div/div[2]/div[2]")as $element)
 {
  if($element)
  {
-  echo $element; 
+  $name = $element->find(/div[1]/div[2]/strong/text())->plaintext;
+  echo  $name;
  }
 }
       
