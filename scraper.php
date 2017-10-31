@@ -10,8 +10,9 @@ $html = 'https://alumni.iba.edu.pk/alumni/findclassmate/a/'.$page;
 //
 // // Find something on the page using css selectors
  $dom = new simple_html_dom();
-echo $dom->load($html);
-// print_r($dom->find("table.list"));
+ $dom->load($html);
+print_r($dom->find("div.search-profile-box"));
+
       
       
   
