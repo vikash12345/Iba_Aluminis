@@ -2,8 +2,14 @@
 // This is a template for a PHP scraper on morph.io (https://morph.io)
 // including some code snippets below that you should find helpful
 
-// require 'scraperwiki.php';
-// require 'scraperwiki/simple_html_dom.php';
+require 'scraperwiki.php';
+require 'scraperwiki/simple_html_dom.php';
+for($paga = 0; $page > 11968; $page+16)
+{
+  echo "$page\n";
+}
+
+
 //
 // // Read in a page
 // $html = scraperwiki::scrape("http://foo.com");
