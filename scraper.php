@@ -6,13 +6,12 @@ require 'scraperwiki/simple_html_dom.php';
 
 for($page = 0; $page < 32; $page+=16)
 {
-$html = 'https://alumni.iba.edu.pk/alumni/findclassmate/a/'.$page;
+ $link = 'https://alumni.iba.edu.pk/alumni/findclassmate/a/'.$page;
+$html = file_get_html($link);
 //
 // // Find something on the page using css selectors
- $dom = new simple_html_dom();
- $dom->load($html);
-$name = $dom->find("/html/body/div/div[2]/div[1]/div/div[2]/div[2]/div[1]/div[2]/strong",0)->plaintext;
- echo $name;
+echo $html;
+
 }
 //
 // // Read in a page
