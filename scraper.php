@@ -15,7 +15,10 @@ if($html)
   foreach($html->find("/html/body/div/div[2]/div[1]/div/div[2]/div[2]/div") as $element)
   {
     $name  = $element->find("div/strong",0);
-   echo "$name\n";
+    $year  = $element->find("div/strong",1);
+    $city  = $element->find("div/strong",2);
+    $record = array( 'name' =>$name, 'year' => $year ,'city' => $city ,'link' => $link);
+           scraperwiki::save(array('name','year','city','link'), $record); 
   }
 }
 
