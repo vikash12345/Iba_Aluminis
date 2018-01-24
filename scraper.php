@@ -15,9 +15,10 @@ if($html)
   foreach($html->find("/html/body/div/div[2]/div[1]/div/div[2]/div[2]/div") as $element)
   {
     $name  = $element->find("div/strong",0)->plaintext;
-  
+  if($name  != "" || $name  != null) {
     $record = array( 'name' =>$name, 'link' => $link);
            scraperwiki::save(array('name','link'), $record); 
+  }
   }
 }
 
