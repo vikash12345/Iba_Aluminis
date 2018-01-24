@@ -12,7 +12,7 @@ $html = file_get_html($link);
 // // Find something on the page using css selectors
 if($html)
 {
-  foreach($html->find("/html/body/div/div[2]/div[1]/div/div[2]/div[2]/div[1]") as $element)
+  foreach($html->find("/html/body/div/div[2]/div[1]/div/div[2]/div[2]/div") as $element)
   {
     echo $element;
   }
