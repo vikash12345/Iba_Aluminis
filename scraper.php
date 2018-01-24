@@ -4,7 +4,7 @@
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 
-for($page = 0; $page < 32; $page+=16)
+for($page = 0; $page < 12768; $page+=16)
 {
  $link = 'https://alumni.iba.edu.pk/alumni/findclassmate/a/'.$page;
 $html = file_get_html($link);
