@@ -10,7 +10,13 @@ for($page = 0; $page < 32; $page+=16)
 $html = file_get_html($link);
 //
 // // Find something on the page using css selectors
-echo $html;
+if($html)
+{
+  foreach($html->find("/html/body/div/div[2]/div[1]/div/div[2]/div[2]/div[1]") as $element)
+  {
+    echo $element;
+  }
+}
 
 }
 //
